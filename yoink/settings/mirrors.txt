@@ -1,0 +1,5 @@
+# Mirrors are servers that mostly have the same content from the main server or from another mirror. In case one of the servers goes down, or is less faster for you, using mirrors could be used as a recovery.
+# Lines that start with a hashtag are considered as a comment, lines without any content will be ignored and any other line will be treated as a link to a mirror.
+# After the mirrors have been inserted, go to your terminal and type "yoink -m".
+
+https://ponali.github.io/yoink-packages
