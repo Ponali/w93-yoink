@@ -1,0 +1,11 @@
+> v2
+boot/yoink.js -> /a/boot/yoink.js
+yoink/* -> /a/yoink/*
+
+---
+
+{
+    "name":"Yoink (Source)",
+    "description":"Yoink is an utility program for Windows93 that acts as a package manager and handles anything related to packages, dependencies, mirrors, etc.\nYou are currently installing a Source version of Yoink, that contains all the source code, including tabs and spaces, meant for development.\n\nIf you wish to install Yoink to your Windows93 computer, you agree to let Yoink run when booting Windows93, and to make a yoink folder in your local storage drive.",
+    "installTxt":"Please wait while Yoink is being installed.\nThis may take a while depending on your computer setup."
+}
