@@ -9,7 +9,7 @@ NOTE: File paths will be relative to the "local storage drive". In Windows93 V2,
 As of right now, only version V2 is supported. There will be support for V3 soon, but the current version that is only accessible is an incomplete public beta, that doesn't have a boot folder or a terminal app.
 
 # Setting up
-As of right now, there only exist "Source" versions of Yoink, made for developpers, putting the source code of Yoink on their hard drive.
+As of right now, there only exist "Source" versions of Yoink, made for developers, putting the source code of Yoink on their hard drive.
 There currently are no Releases for this, but you can make your own Source version installer from the instructions at the end of this README file.
 
 Soon though, there will soon be a normal version of Yoink being a standalone minified script.
@@ -50,7 +50,7 @@ Installed packages can have "additional data" (or "save data"). This data can be
 ## Update source code
 **WARNING**: This will only work with "Source" versions of Yoink. It is unknown what will happen with a regular version of Yoink.
 
-If you are developping Yoink with a "Source" version, there are moments where you will need to recompile Yoink once you're done editing the code that makes it.
+If you are developing Yoink with a "Source" version, there are moments where you will need to recompile Yoink once you're done editing the code that makes it.
 
 To recompile Yoink, simply run `yoink -s` in the terminal.
 
@@ -58,9 +58,9 @@ To recompile Yoink, simply run `yoink -s` in the terminal.
 This happens when the code that got compiled and ran had an error, and hasn't returned an usable app.
 
 When this happens, it's not possible to run `yoink -s` to recompile again.
-You will have to re-run the boot script (Go to boot folder -> Right-click `yoink.js` -> "Open with..." -> Click "Run JS"), or reboot the computer and wait for the boot script to load.
+You will have to re-run the boot script (Go to boot folder -> Right-click `yoiynk.js` -> "Open with..." -> Click "Run JS"), or reboot the computer and wait for the boot script to load.
 
-# Developping Yoink
+# Developing Yoink
 If you want to contribute to Yoink, do some bugfixing, and add features, you will need to get a "Source" version.
 Source versions are versions of Yoink that run source code, and not a complex minified boot script.
 
