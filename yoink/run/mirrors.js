@@ -14,7 +14,7 @@ function updateMirrorList(newlist){
 function parseMirrorTxt(callback){
 	openFile("/a/yoink/settings/mirrors.txt","String",content=>{
     	let lines=content.split("\n");
-    	lines=lines.map(a=>a.slice(0,a.indexOf("#"))); // remove comments
+    	lines=lines.map(a=>a.includes("#")?a.slice(0,a.indexOf("#")):a); // remove comments
     	lines=lines.filter(a=>a.replaceAll(" ","")); // remove empty lines
     	callback(lines)
     })

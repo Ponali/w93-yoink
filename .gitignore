@@ -1,0 +1,4 @@
+installer/node_modules
+
+# i hate how annoying those are
+.fuse_hidden*

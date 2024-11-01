@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "minimist": "^1.2.8",
+    "uglify-js": "^3.19.3"
+  }
+}
