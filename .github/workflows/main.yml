@@ -20,7 +20,7 @@ jobs:
           node make -o ../installer-regular.js
           cd ..
       - name: Clone wizard generator
-        uses: sudosubin/git-clone-action@v1
+        uses: sudosubin/git-clone-action@latest
         with:
           repository: 'Ponali/w93-wizard-generator'
           platform: 'github'
