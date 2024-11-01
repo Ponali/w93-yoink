@@ -18,9 +18,11 @@ jobs:
           node make -o ../installer-regular.js
           cd ..
       - name: Create GitHub release
-        uses: github-actions/release@v1
+        uses: "marvinpinto/action-automatic-releases@latest"
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          tag: ${{ github.ref }}
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: "latest"
+          prerelease: true
+          title: "Development Build"
           files: |
             installer-regular.js
