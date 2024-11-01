@@ -20,10 +20,10 @@ jobs:
           node make -o ../installer-regular.js
           cd ..
       - name: Clone wizard generator
-        uses: sudosubin/git-clone-action@latest
+        uses: GuillaumeFalourd/clone-github-repo-action@v2.1
         with:
-          repository: 'Ponali/w93-wizard-generator'
-          platform: 'github'
+          owner: 'Ponali'
+          repository: 'w93-wizard-generator'
       - name: Make Source installer
         run: |
           cd w93-wizard-generator
