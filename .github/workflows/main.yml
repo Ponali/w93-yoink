@@ -1,0 +1,26 @@
+name: "Make Yoink Installers"
+on: workflow_dispatch
+jobs:
+  what-do-i-name-this:
+    name: "Make installer (regular)"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      - name: Make regular installer
+        run: |
+          cd installer
+          npm install
+          node make -o ../installer-regular.js
+          cd ..
+      - name: Create GitHub release
+        uses: github-actions/release@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          tag: ${{ github.ref }}
+          files: |
+            installer-regular.js
