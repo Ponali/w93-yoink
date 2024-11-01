@@ -1,5 +1,5 @@
 # Introduction
-Yoink is a simple package manager made for [Windows93](https://windows93.net) that lets you install packages locally, and from multiple mirrors.
+Yoink is a simple package manager made for [Windows93](https://windows93.net) that lets you install packages locally and from multiple mirrors.
 
 Keep in mind this is still a work-in-progress! Some bugs may occur at random times, and if they do, please open an issue!
 
@@ -9,7 +9,7 @@ NOTE: File paths will be relative to the "local storage drive". In Windows93 V2,
 As of right now, only version V2 is supported. There will be support for V3 soon, but the current version that is only accessible is an incomplete public beta, that doesn't have a boot folder or a terminal app.
 
 # Setting up
-As of right now, there only exist "Source" versions of Yoink, made for developers, putting the source code of Yoink on their hard drive.
+As of right now, only "Source" versions of Yoink exist. They are made for developers, putting the source code of Yoink on their hard drives.
 There currently are no Releases for this, but you can make your own Source version installer from the instructions at the end of this README file.
 
 Soon though, there will soon be a normal version of Yoink being a standalone minified script.
@@ -31,7 +31,7 @@ First, set the current terminal directory to the one where your package files re
 
 Once you are on the right path, run `yoink (-i) [packagename]`. Yoink will find the file regardless if you put `.ynk` at the end or not.
 ### Online install
-Installing from online mirrors do not require you to go to a specific path. The only thing you need to do is to run `yoink (-i) [packagename]`.
+Installing from online mirrors does not require you to go to a specific path. The only thing you need to do is to run `yoink (-i) [packagename]`.
 
 **WARNINGS**:
 - Adding `.ynk` at the end will make Yoink fail to find any file from any mirrors.
@@ -65,16 +65,16 @@ If you want to contribute to Yoink, do some bugfixing, and add features, you wil
 Source versions are versions of Yoink that run source code, and not a complex minified boot script.
 
 When you install a Yoink "Source" version, there will be a folder called "run" in the "yoink" folder.
-This "run" folder contains most of the source code made to run yoink, that will be compiled and ran by the boot script.
+This "run" folder contains most of the source code made to run yoink, which will be compiled and ran by the boot script.
 
 If you want to make some edits to Yoink, simply open the files, edit them, and recompile it. (see "Update source code")
 
 # Making a Yoink mirror
 Making a Yoink mirror is quite easy. The only requirements are:
-- Server must atleast have static content. No scripts are required.
+- Server must at least have static content. No scripts are required.
 - There must be a file called "yoink.txt" returning the http code "200 OK" or anything likewise. The content of this file doesn't matter.
-- Server output must have CORS enabled for atleast windows93.net or *.windows93.net
-- Package files still end with `.ynk`, so if you are given a package file with the .ynk extension, do not rename the file.
+- Server output must have CORS enabled for at least windows93.net or *.windows93.net
+- Package files still end with `.ynk`, so if you are given a package file with the .ynk extension, do not rename it.
 - All content must be accessible via HTTPS. (HTTP support is unknown and experimental.)
 
 # Making an installer
