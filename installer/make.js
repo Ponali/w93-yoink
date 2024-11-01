@@ -18,7 +18,7 @@ function makeBootScript(){
         files.push(fs.readFileSync(fileList[i]).toString("utf8"));
     };
     let code=files.join("\n");
-    code=`((reloadFunc)=>{${code}})(()=>{})`;
+    code=`function addToSession(exec){le._apps["yoink"]={exec}};addToSession(((reloadFunc)=>{${code}})(()=>{}))`;
 
     return minify(code,true);
 }
