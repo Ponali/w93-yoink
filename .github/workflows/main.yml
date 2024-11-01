@@ -19,12 +19,21 @@ jobs:
           npm install
           node make -o ../installer-regular.js
           cd ..
+      - name: Clone wizard generator
+        uses: sudosubin/git-clone-action@v1
+        with:
+          repository: 'Ponali/w93-wizard-generator'
+          platform: 'github'
+      - name: Make Source installer
+        run: |
+          cd w93-wizard-generator
+          node make ../ -o ../installer-source.js
       - name: Create GitHub release
         uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          automatic_release_tag: "latest"
-          prerelease: true
-          title: "Development Build"
+          prerelease: false
+          draft: true
           files: |
             installer-regular.js
+            installer-source.js
