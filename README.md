@@ -9,10 +9,10 @@ NOTE: File paths will be relative to the "local storage drive". In Windows93 V2,
 As of right now, only version V2 is supported. There will be support for V3 soon, but the current version that is only accessible is an incomplete public beta, that doesn't have a boot folder or a terminal app.
 
 # Setting up
-As of right now, you need to copy all the files from this repo to the root of your "local storage drive", except for ".git", README.MD or any other file on the root of this repo.
-This will change soon with a setup script for a "Source" version of Yoink, and a minified boot script version, that will be available in the Releases tab of this repo.
+As of right now, there only exist "Source" versions of Yoink, made for developpers, putting the source code of Yoink on their hard drive.
+There currently are no Releases for this, but you can make your own Source version installer from the instructions at the end of this README file.
 
-Currently, copying all these files to your "local storage drive" counts as setting up a "Source" version of Yoink.
+Soon though, there will soon be a normal version of Yoink being a standalone minified script.
 
 # Using yoink
 ## Configuring mirrors
@@ -76,3 +76,10 @@ Making a Yoink mirror is quite easy. The only requirements are:
 - Server output must have CORS enabled for atleast windows93.net or *.windows93.net
 - Package files still end with `.ynk`, so if you are given a package file with the .ynk extension, do not rename the file.
 - All content must be accessible via HTTPS. (HTTP support is unknown and experimental.)
+
+# Making an installer
+## Source version installer
+Source version installers are made from [w93-wizard-generator](https://github.com/Ponali/w93-wizard-generator), which explains the existence of the "wizgen-config" file on the root of this repo.
+
+First, clone this repo and the w93-wizard-generator repo, go to the w93-wizard-generator directory, and run `node make ../w93-yoink -o yoink-source-installer.js`.
+Once the program is done, a new file called `yoink-source-installer.js` gets made. This file doesn't require any other content, as it is standalone.
