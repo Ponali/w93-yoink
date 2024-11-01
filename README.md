@@ -58,7 +58,7 @@ To recompile Yoink, simply run `yoink -s` in the terminal.
 This happens when the code that got compiled and ran had an error, and hasn't returned an usable app.
 
 When this happens, it's not possible to run `yoink -s` to recompile again.
-You will have to re-run the boot script (Go to boot folder -> Right-click `yoiynk.js` -> "Open with..." -> Click "Run JS"), or reboot the computer and wait for the boot script to load.
+You will have to re-run the boot script (Go to boot folder -> Right-click `yoink.js` -> "Open with..." -> Click "Run JS"), or reboot the computer and wait for the boot script to load.
 
 # Developing Yoink
 If you want to contribute to Yoink, do some bugfixing, and add features, you will need to get a "Source" version.
