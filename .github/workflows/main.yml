@@ -28,7 +28,7 @@ jobs:
         run: |
           cd w93-wizard-generator
           npm install
-          node make ../ -o ../installer-source.js
+          node make .. -o ../installer-source.js
           cd ..
       - name: Create GitHub release
         uses: "marvinpinto/action-automatic-releases@latest"
