@@ -9,10 +9,16 @@ NOTE: File paths will be relative to the "local storage drive". In Windows93 V2,
 As of right now, only version V2 is supported. There will be support for V3 soon, but the current version that is only accessible is an incomplete public beta, that doesn't have a boot folder or a terminal app.
 
 # Setting up
-As of right now, only "Source" versions of Yoink exist. They are made for developers, putting the source code of Yoink on their hard drives.
-There currently are no Releases for this, but you can make your own Source version installer from the instructions at the end of this README file.
+To set up, you need to first obtain a Yoink installer program. Currently, there is a GitHub action that automatically makes Yoink installers upon a new release.
+You can check in the Releases tab of this repository for a Yoink installer.
 
-Soon though, there will soon be a normal version of Yoink being a standalone minified script.
+An installer is a standalone JavaScript file and only requires to be run on a supported version of Windows93 to install Yoink.
+
+There are two types of Yoink installers:
+- Regular installer (Installs Yoink immidiately, in minified form, reccomended for new users)
+- Source installer (Installs the Yoink source code, reccomended for developpers)
+
+If you would like to make an installer from the Yoink source code yourself, look at the very end of this README file.
 
 # Using yoink
 ## Configuring mirrors
@@ -78,6 +84,14 @@ Making a Yoink mirror is quite easy. The only requirements are:
 - All content must be accessible via HTTPS. (HTTP support is unknown and experimental.)
 
 # Making an installer
+## Regular installer
+To make a regular installer, run the following commands:
+```
+cd installer  # Go to the installer directory
+npm install  # Install all required modules
+node make -o [filename]  # Wait a bit for it to make an installer.
+```
+The installer will appear as `[filename]`, relative to the installer directory. The installer will run on a supported version of Windows93 and will immidiately install Yoink for you.
 ## Source version installer
 Source version installers are made from [w93-wizard-generator](https://github.com/Ponali/w93-wizard-generator), which explains the existence of the "wizgen-config" file on the root of this repo.
 
