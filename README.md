@@ -5,12 +5,16 @@ Keep in mind this is still a work-in-progress! Some bugs may occur at random tim
 
 NOTE: File paths will be relative to the "local storage drive". In Windows93 V2, this drive is /a/. In Windows93 V3 however, this drive is on the root.
 
+[Quick install](https://www.windows93.net/#!js%20data:text/plain;charset=utf-8;base64,JGxvYWRlcihbImh0dHBzOi8vZ2l0aHViLmNvbS9Qb25hbGkvdzkzLXlvaW5rL3JlbGVhc2VzL2xhdGVzdC9kb3dubG9hZC9pbnN0YWxsZXItcmVndWxhci5qcyJdKQ==) / [Quick Source install](https://www.windows93.net/#!js%20data:text/plain;charset=utf-8;base64,JGxvYWRlcihbImh0dHBzOi8vZ2l0aHViLmNvbS9Qb25hbGkvdzkzLXlvaW5rL3JlbGVhc2VzL2xhdGVzdC9kb3dubG9hZC9pbnN0YWxsZXItc291cmNlLmpzIl0p)
+
 # Supported versions
 As of right now, only version V2 is supported. There will be support for V3 soon, but the current version that is only accessible is an incomplete public beta, that doesn't have a boot folder or a terminal app.
 
 # Setting up
 To set up, you need to first obtain a Yoink installer program. Currently, there is a GitHub action that automatically makes Yoink installers upon a new release.
 You can check in the Releases tab of this repository for a Yoink installer.
+
+You can also click on one of the "Quick install" hyperlinks at the start of this README file to quickly install Yoink.
 
 An installer is a standalone JavaScript file and only requires to be run on a supported version of Windows93 to install Yoink.
 
