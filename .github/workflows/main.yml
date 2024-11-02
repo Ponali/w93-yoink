@@ -30,6 +30,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           files: installer-regular.js
           allow_override: true
+          gzip: false
       - name: Clone wizard generator
         uses: GuillaumeFalourd/clone-github-repo-action@v2.1
         with:
@@ -47,3 +48,4 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           files: installer-source.js
           allow_override: true
+          gzip: false
