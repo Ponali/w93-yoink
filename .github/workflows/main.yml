@@ -25,10 +25,10 @@ jobs:
           node make -o ../installer-regular.js
           cd ..
       - name: Upload regular installer
-        uses: djn24/add-asset-to-release@v1
+        uses: meeDamian/github-release@2.0
         with:
-          token: ${{secrets.GITHUB_TOKEN}}
-          path: 'installer-regular.js'
+          token: ${{ secrets.GITHUB_TOKEN }}
+          files: installer-regular.js
       - name: Clone wizard generator
         uses: GuillaumeFalourd/clone-github-repo-action@v2.1
         with:
@@ -40,8 +40,8 @@ jobs:
           npm install
           node make .. -o ../installer-source.js
           cd ..
-      - name: Upload
-        uses: djn24/add-asset-to-release@v1
+      - name: Upload source installer
+        uses: meeDamian/github-release@2.0
         with:
-          token: ${{secrets.GITHUB_TOKEN}}
-          path: 'installer-source.js'
+          token: ${{ secrets.GITHUB_TOKEN }}
+          files: installer-source.js
