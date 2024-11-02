@@ -7,7 +7,7 @@ on:
       - v*
 jobs:
   what-do-i-name-this:
-    name: "Make installer (regular)"
+    name: "Make installers"
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -24,6 +24,11 @@ jobs:
           npm install
           node make -o ../installer-regular.js
           cd ..
+      - name: Upload regular installer
+        uses: djn24/add-asset-to-release@v1
+        with:
+          token: ${{secrets.GITHUB_TOKEN}}
+          path: 'installer-regular.js'
       - name: Clone wizard generator
         uses: GuillaumeFalourd/clone-github-repo-action@v2.1
         with:
@@ -35,13 +40,8 @@ jobs:
           npm install
           node make .. -o ../installer-source.js
           cd ..
-      - name: Create GitHub release
-        uses: "marvinpinto/action-automatic-releases@latest"
+      - name: Upload
+        uses: djn24/add-asset-to-release@v1
         with:
-          automatic_release_tag: "${{ github.ref_name }}"
-          repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          prerelease: false
-          draft: false
-          files: |
-            installer-regular.js
-            installer-source.js
+          token: ${{secrets.GITHUB_TOKEN}}
+          path: 'installer-source.js'
