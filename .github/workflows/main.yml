@@ -1,5 +1,11 @@
 name: "Make Yoink Installers"
-on: workflow_dispatch
+on: 
+  push:
+    branches:
+      - main
+    tags:
+      - build-*
+      - v*
 jobs:
   what-do-i-name-this:
     name: "Make installer (regular)"
@@ -34,7 +40,7 @@ jobs:
         uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          prerelease: false
+          prerelease: ${{ [[ ${{ github.ref_name }} == "build-*" ]] }}
           draft: true
           files: |
             installer-regular.js
