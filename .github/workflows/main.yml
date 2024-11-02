@@ -41,7 +41,7 @@ jobs:
           automatic_release_tag: "${{ github.ref_name }}"
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           prerelease: false
-          draft: true
+          draft: false
           files: |
             installer-regular.js
             installer-source.js
