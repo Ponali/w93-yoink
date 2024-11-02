@@ -1,6 +1,6 @@
 const help=[
 	"Yoink is a package manager made for Windows 93 that helps downloading and installing software in a linux-esque manner, making for any program to be only in one place on the disk.",
-	"If you would like to help the project grow, this is open-source on GitHub: <b>[[INSERT GH LINK HERE]]</b>",
+	"If you would like to help the project grow, this is open-source on GitHub: https://github.com/Ponali/w93-yoink/",
 	"",
 	"Usage: yoink [-i, -r [-o, -a], -m] [packagenames]",
 	"-i: Install packages. If a package already exists, it will be reinstalled.",
