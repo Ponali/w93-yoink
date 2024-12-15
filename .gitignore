@@ -1,4 +1,5 @@
 installer/node_modules
+installer/out.js
 
 # i hate how annoying those are
 .fuse_hidden*

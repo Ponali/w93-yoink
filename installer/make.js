@@ -29,11 +29,24 @@ function makeInstaller(bootScript){
     //console.log(minified);
     return minified.replace("_bootScriptFunction",`(()=>{${bootScript}})`);
 }
+function compressPackJS(codeStr){
+    // compresses javascript code and packs it to decompress and launch when ran.
+    const cmp=require("zlib").deflateSync(codeStr);
+    const cmpStr=`atob(${JSON.stringify(cmp.toString("base64"))}).split("").map(a=>a.charCodeAt())`;
+    const out=minify(`(()=>{${fs.readFileSync("pako_inflate.min.js").toString("utf8")}})();`
+        +`(new Function(pako.inflate(new Uint8Array(${cmpStr}),{to:"string"})))()`,true);
+    if(out.length>codeStr){
+        console.warn("Packing content led to higher size - Resorting to original code");
+        return codeStr
+    } else return out;
+}
 let time=Date.now();
 console.log("Making boot script...");
 let bootScript=makeBootScript();
 console.log("Making installer...");
 let ins=makeInstaller(bootScript);
+console.log("Packing...");
+let insFinal=compressPackJS(ins);
 console.log("Saving...");
-fs.writeFileSync((argv.o||argv.output||argv._[0]||"out.js"),ins);
+fs.writeFileSync((argv.o||argv.output||argv._[0]||"out.js"),insFinal);
 console.log(`Made Yoink installer in ${(Date.now()-time)/1000} seconds`)
